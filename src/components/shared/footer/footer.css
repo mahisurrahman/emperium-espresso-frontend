@@ -1,0 +1,13 @@
+.footer-bg{
+    background: url('../../../../public/more/13.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.down-footer{
+    background: url('../../../../public/more/15.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
