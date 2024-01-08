@@ -1,12 +1,17 @@
 import { FaArrowLeft } from "react-icons/fa";
-import './UpdateCoffee.css';
+import "./UpdateCoffee.css";
+import { Link, useLoaderData } from "react-router-dom";
 
 const UpdateCoffee = () => {
-    return (
-        <div className="bg-white px-28 py-10 UpdateCoffeeBG">
-      <button className="flex font-rancho-font text-2xl text-[#374151] gap-2 items-center hover:font-bold hover:cursor-pointer hover:duration-700">
-        <FaArrowLeft></FaArrowLeft>Back to Home
-      </button>
+  const coffee = useLoaderData();
+
+  return (
+    <div className="bg-white px-28 py-10 UpdateCoffeeBG">
+      <Link to={"/"}>
+        <button className="flex font-rancho-font text-2xl text-[#374151] gap-2 items-center hover:font-bold hover:cursor-pointer hover:duration-700">
+          <FaArrowLeft></FaArrowLeft>Back to Home
+        </button>
+      </Link>
 
       <form className="bg-[#F4F3F0] my-5 px-20">
         <div className="text-center pt-10 pb-5">
@@ -27,6 +32,7 @@ const UpdateCoffee = () => {
               Name
             </label>
             <input
+              defaultValue={coffee.name}
               className="bg-white py-2 px-4 w-full"
               type="text"
               name="name"
@@ -38,6 +44,7 @@ const UpdateCoffee = () => {
               Chef
             </label>
             <input
+              defaultValue={coffee.chefName}
               className="bg-white py-2 px-4 w-full"
               type="text"
               name="chefName"
@@ -46,13 +53,14 @@ const UpdateCoffee = () => {
           </div>
           <div className="flex flex-col">
             <label className="text-black mb-4 text-md font-semibold">
-              Supplier
+              Price
             </label>
             <input
+              defaultValue={coffee.price}
               className="bg-white py-2 px-4 w-full"
               type="text"
-              name="supplierName"
-              placeholder="Enter Coffee Supplier"
+              name="price"
+              placeholder="Enter Price $"
             />
           </div>
           <div className="flex flex-col">
@@ -60,6 +68,7 @@ const UpdateCoffee = () => {
               Taste
             </label>
             <input
+              defaultValue={coffee.taste}
               className="bg-white py-2 px-4 w-full"
               type="text"
               name="coffeeTaste"
@@ -71,6 +80,7 @@ const UpdateCoffee = () => {
               Category
             </label>
             <input
+              defaultValue={coffee.category}
               className="bg-white py-2 px-4 w-full"
               type="text"
               name="coffeeCategory"
@@ -95,19 +105,22 @@ const UpdateCoffee = () => {
               Photo URL
             </label>
             <input
+              defaultValue={coffee.photo}
               className="bg-white py-2 px-4 w-full mt-2 mb-5 text-lg"
               type="text"
-              name="photoURL"
+              name="photo"
               placeholder="Enter Coffee Photo"
             />
           </div>
           <div className="w-full text-centers pb-20">
-            <button className="w-full font-rancho-font text-[#331A15] text-2xl font-bold border-2 border-[#331A15] rounded-md py-1 bg-[#D2B48C] hover:text-[#D2B48C] hover:bg-[#331A15] hover:cursor-pointer hover:duration-700">Update Coffee Details</button>
+            <button className="w-full font-rancho-font text-[#331A15] text-2xl font-bold border-2 border-[#331A15] rounded-md py-1 bg-[#D2B48C] hover:text-[#D2B48C] hover:bg-[#331A15] hover:cursor-pointer hover:duration-700">
+              Update Coffee Details
+            </button>
           </div>
         </div>
       </form>
     </div>
-    );
+  );
 };
 
 export default UpdateCoffee;
