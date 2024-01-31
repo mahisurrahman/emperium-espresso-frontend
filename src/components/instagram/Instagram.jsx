@@ -9,7 +9,7 @@ import imageEight from '../../../public/cups/Rectangle 9.png'
 
 const Instagram = () => {
   return (
-    <div className="py-20 px-28">
+    <div className="py-10 md:py-20 px-4 md:px-28">
       <div className="text-center">
         <h1 className="text-[#1B1A1A] text-lg font-raleway-font">
           --- Follow Us Now ---

@@ -21,7 +21,7 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
-        loader: ()=>fetch('http://localhost:5000/coffees'),
+        loader: ()=>fetch('https://emperium-espresso-backend.vercel.app/coffees'),
       },
       {
         path: "addCoffee",
@@ -30,12 +30,12 @@ const router = createBrowserRouter([
       {
         path: "updateCoffee/:id",
         element: <UpdateCoffee></UpdateCoffee>,
-        loader: ({params})=> fetch(`http://localhost:5000/coffees/${params.id}`)
+        loader: ({params})=> fetch(`https://emperium-espresso-backend.vercel.app/coffees/${params.id}`)
       },
       {
         path: "viewCoffee/:id",
         element: <ViewCoffee></ViewCoffee>,
-        loader: ({params}) => fetch(`http://localhost:5000/coffees/${params.id}`)
+        loader: ({params}) => fetch(`https://emperium-espresso-backend.vercel.app/coffees/${params.id}`)
       }
     ]
   },

@@ -5,8 +5,8 @@ import iconFour from '../../../public/icons/4.png';
 
 const RibbonBanner = () => {
     return (
-        <div className="bg-[#ECEAE3] px-28">
-            <div className='flex justify-evenly gap-10 py-10'>
+        <div className="bg-[#ECEAE3] px-4 md:px-28">
+            <div className='grid grid-cols-2 md:grid-cols-4 justify-center md:justify-evenly items-center gap-2 md:gap-10 py-10'>
                 <div className=''>
                     <img src={iconOne} className='w-16' alt="" />
                     <h1 className='font-rancho-font text-[#1B1A1A] text-3xl mt-3 mb-1'>Awesome Aroma</h1>

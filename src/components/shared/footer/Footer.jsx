@@ -13,7 +13,7 @@ import {
 const Footer = () => {
   return (
     <div className="pt-10 footer-bg">
-      <div className="grid grid-cols-2 gap-20 px-28">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-20 px-4 md:px-28">
         <div>
           <div>
             <img src={logo01} className="w-10 h-10 my-2" alt="" />
@@ -56,17 +56,17 @@ const Footer = () => {
             Contact With Us
           </h1>
           <form>
-            <input className="bg-white px-4 py-2 w-10/12 my-2" type="text" name="name" placeholder="Name" />
+            <input className="bg-white px-4 py-2 w-full md:w-10/12 my-2" type="text" name="name" placeholder="Name" />
             <br />
-            <input className="bg-white px-4 py-2 w-10/12 my-2" type="email" name="email" placeholder="Email" />
+            <input className="bg-white px-4 py-2 w-full md:w-10/12 my-2" type="email" name="email" placeholder="Email" />
             <br />
-            <textarea className="bg-white px-4 py-2 w-10/12 my-2" placeholder="Message" name="text" cols="30" rows="5"></textarea>
+            <textarea className="bg-white px-4 py-2 w-full md:w-10/12 my-2" placeholder="Message" name="text" cols="30" rows="5"></textarea>
             <input type="submit" value="Send Message" className="px-4 py-1 font-rancho-font text-lg text-[#331A15] border-2 border-[#331A15] rounded-3xl" />
           </form>
         </div>
       </div>
       <div className="down-footer py-1 text-center mt-10">
-        <h1 className="font-rancho-font text-xl text-white font-light">
+        <h1 className="font-rancho-font text-xl text-white font-light px-4 md:px-0">
           Copyright Espresso Emporium by Mahisur Rahman! All Rights Reserved © 2024
         </h1>
       </div>

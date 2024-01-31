@@ -6,8 +6,8 @@ import Cards from '../shared/cards/Cards';
 const AllProducts = ({coffees}) => { 
   const allCoffees = coffees;
   return (
-    <div className="allProductsCSS py-20">
-      <div className="px-28">
+    <div className="allProductsCSS py-10 md:py-20">
+      <div className="px-4 md:px-28">
         <div>
           <div className="text-center">
             <h1 className="text-[#1B1A1A] text-lg font-raleway-font">
@@ -26,7 +26,7 @@ const AllProducts = ({coffees}) => {
             </Link>
           </div>
         </div>
-        <div className="pt-20 grid grid-cols-2 gap-10">
+        <div className="pt-10 md:pt-20 grid grid-cols-1 md:grid-cols-2 gap-10">
           {
             allCoffees.map(coffee=><Cards key={coffee._id} coffee={coffee}></Cards>)
           }

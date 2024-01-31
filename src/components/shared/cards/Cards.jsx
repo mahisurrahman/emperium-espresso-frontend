@@ -20,7 +20,7 @@ const Cards = ({ coffee }) => {
       confirmButtonText: "Yes, delete it!"
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`http://localhost:5000/coffees/${_id}`,{
+        fetch(`https://emperium-espresso-backend.vercel.app/coffees/${_id}`,{
           method: 'DELETE',
         })
           .then(res => res.json())
@@ -42,10 +42,10 @@ const Cards = ({ coffee }) => {
   }
 
   return (
-    <div className="bg-[#F5F4F1] rounded-xl px-10 py-5">
-      <div className="flex gap-5">
+    <div className="bg-[#F5F4F1] rounded-xl px-4 md:px-10 py-5">
+      <div className="flex gap-3 md:gap-5 items-center">
         <div>
-          <img src={photo} className="rounded-full object-cover w-40 h-40" alt="" />
+          <img src={photo} className="rounded-full object-cover w-22 md:w-40 h-20 md:h-40" alt="" />
         </div>
         <div className="grid grid-cols-1 items-center">
           <div>

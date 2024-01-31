@@ -19,7 +19,7 @@ const AddCoffee = () => {
     const addedCoffee = {name, chefName, price, taste, category, details, photo};
     // console.log(addedCoffee);
 
-    fetch('http://localhost:5000/coffees',{
+    fetch('https://emperium-espresso-backend.vercel.app/coffees',{
       method: 'POST',
       headers: {
         'content-type': 'application/json',
@@ -39,14 +39,14 @@ const AddCoffee = () => {
 
 
   return (
-    <div className="bg-white px-28 py-10 addCoffeeBG">
+    <div className="bg-white px-4 md:px-28 py-10 addCoffeeBG">
       <NavLink to="/">
         <button className="flex font-rancho-font text-2xl text-[#374151] gap-2 items-center hover:font-bold hover:cursor-pointer hover:duration-700">
           <FaArrowLeft></FaArrowLeft>Back to Home
         </button>
       </NavLink>
 
-      <form onSubmit={handleAddCoffee} className="bg-[#F4F3F0] my-5 px-20">
+      <form onSubmit={handleAddCoffee} className="bg-[#F4F3F0] my-5 px-5 md:px-20">
         <div className="text-center pt-10 pb-5">
           <h1 className="font-rancho-font text-4xl font-bold text-[#374151] tracking-wider">
             Add a New Coffee
@@ -59,7 +59,7 @@ const AddCoffee = () => {
           </p>
         </div>
 
-        <div className="font-raleway-font grid grid-cols-2 gap-10">
+        <div className="font-raleway-font grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-10">
           <div className="flex flex-col">
             <label className="text-black mb-4 text-md font-semibold">
               Name
